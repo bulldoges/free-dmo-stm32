@@ -1,8 +1,8 @@
-##FreeDMO
+## FreeDMO
 
 Endless freedom for D.MO 550 series label writer printer.
 
-##Wiring
+## Wiring
 
 Components needed:
 
@@ -15,7 +15,7 @@ Components needed:
  * 2x resistor `4.7kΩ`
  
  
-##Assembly
+## Assembly
 
 **→ Make sure that the cables are connected correctly.**<br/>
 The left cable goes to the RFID board, the right cable goes to the main board of the label printer.
@@ -32,7 +32,7 @@ Connection to main board:
 ![MAIN BOARD](ASSEMBLY_PICTURES/i2.jpg)
 
 
-##Firmware
+## Firmware
 
 Option 1: Install required ARM toolchain from distribution
 
@@ -54,7 +54,7 @@ Option 3: Use the precompiled firmware
  * a precompiled firmware binary is avalibale in the `COMPILED_FIRMWARE` folder
 
 
-##Download firmware to STM32F103 bluepill
+## Download firmware to STM32F103 bluepill
 
  * after compilation you can find the firmware file `freedmo.bin` in the `build` folder
 
@@ -69,15 +69,15 @@ Option 3: Use the precompiled firmware
      https://www.electronicshub.org/how-to-upload-stm32f103c8t6-usb-bootloader<br/>
      Just select the file `freedmo.bin` in "Download from file" (2)
 
-##STM32CubeMx
+## STM32CubeMx
 
 The project comes with the CubeMX .ioc file which can be used to modify pins and/or change to different CPU types. The complete code is inside of ST's magic `BEGIN_USER_CODE` / `END_USER_CODE` markers so "Generate Code" in CubeMX can be used without any problems.
 
 
-###STM32F103 pin assignment
+### STM32F103 pin assignment
 ![CUBEMX](ASSEMBLY_PICTURES/i1.png)
 
-##D.MO RFID tag emulation
+## D.MO RFID tag emulation
 
 After startup of the printer a default tag emulation is used which can be defined in the firmware.
 The emulation will count down correctly until the end of the roll is reached. A power cycle / sleep+wakeup of the printer is enough to reset the emulated tag counter back to it's maximum.
